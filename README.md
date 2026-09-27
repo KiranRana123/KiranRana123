@@ -20,10 +20,6 @@
 
 <img src="assets/svg/timeline.svg" width="100%" alt="Journey timeline" />
 
-<img src="assets/svg/experience.svg" width="100%" alt="Graduate TA at UC Santa Cruz; Software Engineer and Intern at JPMorgan Chase & Co." />
-
-<img src="assets/svg/highlights.svg" width="100%" alt="Impact in numbers" />
-
 <img src="assets/svg/divider.svg" width="100%" alt="" />
 
 <picture>
@@ -56,13 +52,8 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/svg/header-stats-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/svg/header-stats-light.svg">
-  <img src="assets/svg/header-stats-dark.svg" width="100%" alt="GitHub Stats" />
+  <img src="assets/svg/header-stats-dark.svg" width="100%" alt="Contributions" />
 </picture>
-
-<p align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=KiranRana123&show_icons=true&hide_border=true&bg_color=0c0a14&title_color=a78bfa&icon_color=2dd4bf&text_color=f5f3ff&count_private=true" alt="GitHub stats" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=KiranRana123&layout=compact&hide_border=true&bg_color=0c0a14&title_color=a78bfa&text_color=f5f3ff" alt="Top languages" />
-</p>
 
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/KiranRana123/KiranRana123/output/github-snake-dark.svg" />

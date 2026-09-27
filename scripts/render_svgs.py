@@ -32,46 +32,6 @@ PROFILE = {
         ("2025", "MS CSE", "UC Santa Cruz"),
         ("2026", "Graduate TA", "UC Santa Cruz"),
     ],
-    "roles_detail": [
-        {
-            "title": "Graduate Teaching Assistant",
-            "org": "University of California, Santa Cruz",
-            "when": "Mar 2026 - Jul 2026",
-            "where": "Santa Cruz, CA",
-            "bullets": [
-                "Led weekly discussion sections for a Statistics class of 160+ students",
-                "Answered student questions, proctored exams and graded assessments",
-            ],
-        },
-        {
-            "title": "Software Engineer",
-            "org": "JPMorgan Chase & Co.",
-            "when": "Aug 2024 - Sep 2025",
-            "where": "Hyderabad, India",
-            "bullets": [
-                "Automated password rotation for 500+ databases with microservices, saving 8+ eng hours/week",
-                "Built a Jira API integration in Geneos: ticket creation from 10 minutes to near-instant",
-                "Owned 6 production releases end to end, from PR coordination to post-merge monitoring",
-                "Built database monitoring scripts with under-30-second outage alerting",
-            ],
-        },
-        {
-            "title": "Software Engineer Intern",
-            "org": "JPMorgan Chase & Co.",
-            "when": "Jun 2023 - Jul 2023",
-            "where": "Hyderabad, India",
-            "bullets": [
-                "Rebuilt a legacy Java workflow in Python on AWS S3, SQS and Lambda: 60 min to under 10 min",
-                "Added JWT-based server-to-server auth to a secure, scalable data pipeline",
-            ],
-        },
-    ],
-    "highlights": [
-        ("500+", "databases with automated", "password rotation"),
-        ("8+ hrs", "engineering time saved", "every week"),
-        ("6x", "faster processing: 60 min", "to under 10 min"),
-        ("3.8x", "faster VLM inference,", "16.6% to 41.3% accuracy"),
-    ],
     "projects": [
         {
             "slug": "vlm-evolve",
@@ -386,49 +346,6 @@ def timeline():
     svg("timeline", h, "".join(body), "Journey: " + ", ".join(f"{a} {b}, {c}" for a, b, c in items))
 
 
-def roles():
-    body, y = [], 24
-    blocks = []
-    for r in PROFILE["roles_detail"]:
-        bh = 58 + len(r["bullets"]) * 22
-        blocks.append((r, y, bh))
-        y += bh + 14
-    h = y + 10
-    body.append(card(h))
-    for i, (r, top, bh) in enumerate(blocks):
-        body.append(f'<g>{fade(0.2 + i * 0.35)}')
-        body.append(f'<rect x="20" y="{top}" width="800" height="{bh}" rx="12" fill="{BG2}" stroke="{FAINT}"/>')
-        body.append(f'<rect x="20" y="{top + 14}" width="3" height="{bh - 28}" rx="1.5" fill="{ACC}"/>')
-        body.append(f'<text class="t" x="40" y="{top + 28}" fill="{TXT}" font-size="16">{e(r["title"])}'
-                    f'<tspan class="s" fill="{ACC}" font-size="14">  ·  {e(r["org"])}</tspan></text>')
-        body.append(f'<text class="m" x="804" y="{top + 27}" text-anchor="end" fill="{ACC2}" font-size="10">{e(r["when"].upper())}</text>')
-        body.append(f'<text class="s" x="804" y="{top + 44}" text-anchor="end" fill="{MUTED}" font-size="11">{e(r["where"])}</text>')
-        for j, b in enumerate(r["bullets"]):
-            by = top + 54 + j * 22
-            body.append(f'<circle cx="46" cy="{by - 4}" r="2.5" fill="{ACC2}"/>')
-            body.append(f'<text class="s" x="58" y="{by}" fill="rgba(255,255,255,0.8)" font-size="13">{e(b)}</text>')
-        body.append("</g>")
-    label = "; ".join(f'{r["title"]}, {r["org"]} ({r["when"]})' for r in PROFILE["roles_detail"])
-    svg("experience", h, "".join(body), label)
-
-
-def highlights():
-    items = PROFILE["highlights"]
-    h, gap = 124, 12
-    w = (W - 40 - gap * (len(items) - 1)) / len(items)
-    body = [card(h), f'<text class="m" x="24" y="26" fill="{ACC2}" font-size="10">IMPACT IN NUMBERS</text>']
-    for i, (num, l1, l2) in enumerate(items):
-        x = 20 + i * (w + gap)
-        body.append(
-            f'<g>{fade(0.2 + i * 0.2)}'
-            f'<rect x="{x:.1f}" y="38" width="{w:.1f}" height="72" rx="10" fill="{BG2}" stroke="{FAINT}"/>'
-            f'<text class="h" x="{x + 14:.1f}" y="68" fill="{ACC}" font-size="24">{e(num)}</text>'
-            f'<text class="s" x="{x + 14:.1f}" y="86" fill="{MUTED}" font-size="11">{e(l1)}</text>'
-            f'<text class="s" x="{x + 14:.1f}" y="100" fill="{MUTED}" font-size="11">{e(l2)}</text></g>'
-        )
-    svg("highlights", h, "".join(body), "Highlights: " + "; ".join(f"{a} {b} {c}" for a, b, c in items))
-
-
 def project_cards():
     w, h = 410, 210
     for p in PROFILE["projects"]:
@@ -542,14 +459,12 @@ if __name__ == "__main__":
         ("experience", "01", "WHERE I HAVE WORKED", "Experience"),
         ("projects", "02", "THINGS I HAVE BUILT", "Featured Projects"),
         ("stack", "03", "WHAT I WORK WITH", "Tech Stack"),
-        ("stats", "04", "ACTIVITY ON GITHUB", "GitHub Stats"),
+        ("stats", "04", "ACTIVITY ON GITHUB", "Contributions"),
         ("education", "05", "WHERE I STUDIED", "Education"),
         ("leadership", "06", "BEYOND CODE", "Leadership & Involvement"),
     ]:
         header(slug, num, kicker, title)
     timeline()
-    roles()
-    highlights()
     project_cards()
     stack()
     education()
