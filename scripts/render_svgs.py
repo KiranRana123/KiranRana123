@@ -32,61 +32,6 @@ PROFILE = {
         ("2025", "MS CSE", "UC Santa Cruz"),
         ("2026", "Graduate TA", "UC Santa Cruz"),
     ],
-    "projects": [
-        {
-            "slug": "vlm-evolve",
-            "name": "Evolutionary VLM Inference",
-            "tag": "RESEARCH",
-            "desc": "LLM-driven evolutionary search, inspired by AlphaEvolve, that rewrites inference "
-                    "code from failed examples to improve frozen Vision-Language Models without retraining.",
-            "metric": "16.6% to 41.3% exact match, 3.8x faster",
-            "stack": ["Python", "PyTorch", "Hugging Face", "Gemini API"],
-        },
-        {
-            "slug": "attendance",
-            "name": "AI Attendance System",
-            "tag": "MICROSOFT ENGAGE",
-            "desc": "Full-stack facial recognition attendance system with real-time logging and "
-                    "anti-spoofing (liveness detection) for employees and admins.",
-            "metric": "Built for Microsoft Engage 2022",
-            "stack": ["React", "Django", "OpenCV", "SQLite"],
-        },
-        {
-            "slug": "ai-interviewer",
-            "name": "AI Interviewer",
-            "tag": "IN PROGRESS",
-            "desc": "An AI-powered mock interview assistant for practicing technical and "
-                    "behavioral interviews.",
-            "metric": "Currently building",
-            "stack": ["Python", "LLMs"],
-        },
-        {
-            "slug": "recipe-api",
-            "name": "Recipe REST API",
-            "tag": "BACKEND",
-            "desc": "Containerized REST API for creating and managing recipes, with "
-                    "token authentication.",
-            "metric": "Dockerized Django REST service",
-            "stack": ["Python", "Django REST", "Docker"],
-        },
-        {
-            "slug": "fileshare",
-            "name": "FileShare",
-            "tag": "LIVE",
-            "desc": "Drag-and-drop web app for uploading a file and sharing it by link.",
-            "metric": "Deployed on GitHub Pages",
-            "stack": ["JavaScript", "HTML", "CSS"],
-        },
-        {
-            "slug": "dsa",
-            "name": "DSA Prep in C++",
-            "tag": "PRACTICE",
-            "desc": "Data structures and algorithms practice: solutions and patterns for "
-                    "interview-style problems.",
-            "metric": "Ongoing practice",
-            "stack": ["C++", "STL"],
-        },
-    ],
     "stack": [
         ("LANGUAGES", ["C++", "Python", "Java", "JavaScript", "SQL", "HTML", "CSS"]),
         ("FRAMEWORKS & ML", ["React", "Django", "Node.js", "PyTorch", "TensorFlow", "OpenCV", "Hugging Face"]),
