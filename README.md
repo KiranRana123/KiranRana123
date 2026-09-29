@@ -7,7 +7,7 @@
 <p align="center">
 <a href="https://www.linkedin.com/in/kiran-rana-0228b9191/"><img src="assets/svg/connect-linkedin.svg" width="32%" alt="LinkedIn" /></a>
 <a href="mailto:kiran.rana0128@gmail.com"><img src="assets/svg/connect-email.svg" width="32%" alt="Email" /></a>
-<a href="https://github.com/KiranRana123"><img src="assets/svg/connect-github.svg" width="32%" alt="GitHub" /></a>
+<a href="https://leetcode.com/u/kiran_rana/"><img src="assets/svg/connect-leetcode.svg" width="32%" alt="LeetCode" /></a>
 </p>
 
 <img src="assets/svg/divider.svg" width="100%" alt="" />

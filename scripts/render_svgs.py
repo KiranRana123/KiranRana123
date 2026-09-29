@@ -207,8 +207,8 @@ CONNECT_ICONS = {
                 '<text x="10" y="15" text-anchor="middle" font-family="Arial" font-weight="700" font-size="12" fill="#0c0a14">in</text>',
     "email": '<rect x="1" y="3" width="18" height="14" rx="2" fill="none" stroke="{c}" stroke-width="2"/>'
              '<path d="M2 5l8 6 8-6" fill="none" stroke="{c}" stroke-width="2"/>',
-    "github": '<circle cx="10" cy="10" r="9" fill="none" stroke="{c}" stroke-width="2"/>'
-              '<path d="M7 17v-3c0-1 .5-1.6 1-2-2-.3-3.5-1-3.5-3.4 0-.8.3-1.5.8-2-.1-.3-.3-1.1.1-2.1 0 0 .7-.2 2.1.8a7 7 0 0 1 4 0c1.4-1 2.1-.8 2.1-.8.4 1 .2 1.8.1 2.1.5.5.8 1.2.8 2 0 2.4-1.5 3.1-3.5 3.4.5.4 1 1 1 2v3" fill="none" stroke="{c}" stroke-width="1.6"/>',
+    "leetcode": '<path d="M13 2L5 10l8 8" fill="none" stroke="{c}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>'
+                '<path d="M9 10h9" stroke="{c}" stroke-width="2.2" stroke-linecap="round"/>',
 }
 
 
@@ -216,7 +216,7 @@ def connect():
     for key, label, color in [
         ("linkedin", "LinkedIn", "#60a5fa"),
         ("email", "Email", ACC2),
-        ("github", "GitHub", ACC),
+        ("leetcode", "LeetCode", "#fbbf24"),
     ]:
         w, h = 240, 56
         icon = CONNECT_ICONS[key].format(c=color)
