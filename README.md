@@ -23,23 +23,6 @@
 <img src="assets/svg/divider.svg" width="100%" alt="" />
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="assets/svg/header-projects-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="assets/svg/header-projects-light.svg">
-  <img src="assets/svg/header-projects-dark.svg" width="100%" alt="Featured Projects" />
-</picture>
-
-<p align="center">
-<img src="assets/svg/project-vlm-evolve.svg" width="49%" alt="Evolutionary VLM Inference: LLM-driven evolutionary search that rewrites inference code to improve frozen Vision-Language Models." />
-<img src="assets/svg/project-attendance.svg" width="49%" alt="AI Attendance System: facial recognition attendance with liveness detection, built with React, Django and OpenCV." />
-<a href="https://github.com/KiranRana123/AI_Interviewer"><img src="assets/svg/project-ai-interviewer.svg" width="49%" alt="AI Interviewer: AI-powered mock interview assistant." /></a>
-<a href="https://github.com/KiranRana123/recipe-app-api"><img src="assets/svg/project-recipe-api.svg" width="49%" alt="Recipe REST API: containerized Django REST API." /></a>
-<a href="https://kiranrana123.github.io/FileShare/"><img src="assets/svg/project-fileshare.svg" width="49%" alt="FileShare: drag-and-drop file sharing web app." /></a>
-<a href="https://github.com/KiranRana123/dsa-prep-cpp"><img src="assets/svg/project-dsa.svg" width="49%" alt="DSA Prep in C++" /></a>
-</p>
-
-<img src="assets/svg/divider.svg" width="100%" alt="" />
-
-<picture>
   <source media="(prefers-color-scheme: dark)" srcset="assets/svg/header-stack-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="assets/svg/header-stack-light.svg">
   <img src="assets/svg/header-stack-dark.svg" width="100%" alt="Tech Stack" />

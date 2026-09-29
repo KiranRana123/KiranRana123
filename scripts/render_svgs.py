@@ -291,28 +291,6 @@ def timeline():
     svg("timeline", h, "".join(body), "Journey: " + ", ".join(f"{a} {b}, {c}" for a, b, c in items))
 
 
-def project_cards():
-    w, h = 410, 210
-    for p in PROFILE["projects"]:
-        body = [
-            f'<defs><linearGradient id="t" x1="0" x2="1"><stop offset="0" stop-color="{ACC_D}"/>'
-            f'<stop offset="1" stop-color="{ACC2}"/></linearGradient></defs>',
-            card(h, w, 14),
-            f'<rect x="1" y="1" width="{w - 2}" height="4" rx="2" fill="url(#t)"/>',
-            f'<text class="m" x="20" y="34" fill="{ACC2}" font-size="10">{e(p["tag"])}</text>',
-            f'<text class="t" x="20" y="62" fill="{TXT}" font-size="20">{e(p["name"])}</text>',
-        ]
-        for i, ln in enumerate(wrap(p["desc"], 56)[:4]):
-            body.append(f'<text class="s" x="20" y="{88 + i * 18}" fill="rgba(255,255,255,0.72)" font-size="12.5">{e(ln)}</text>')
-        body.append(f'<text class="m" x="20" y="{h - 48}" fill="{ACC}" font-size="10.5" letter-spacing="0.6">&#9656; {e(p["metric"])}</text>')
-        x = 20
-        for s in p["stack"]:
-            cw, c = chip(x, h - 36, s, ACC, 10)
-            body.append(c)
-            x += cw + 6
-        svg(f'project-{p["slug"]}', h, "".join(body), f'{p["name"]}: {p["desc"]}', width=w)
-
-
 def stack():
     groups = PROFILE["stack"]
     body, y = [], 22
@@ -402,15 +380,13 @@ if __name__ == "__main__":
     divider()
     for slug, num, kicker, title in [
         ("experience", "01", "WHERE I HAVE WORKED", "Experience"),
-        ("projects", "02", "THINGS I HAVE BUILT", "Featured Projects"),
-        ("stack", "03", "WHAT I WORK WITH", "Tech Stack"),
-        ("stats", "04", "ACTIVITY ON GITHUB", "Contributions"),
-        ("education", "05", "WHERE I STUDIED", "Education"),
-        ("leadership", "06", "BEYOND CODE", "Leadership & Involvement"),
+        ("stack", "02", "WHAT I WORK WITH", "Tech Stack"),
+        ("stats", "03", "ACTIVITY ON GITHUB", "Contributions"),
+        ("education", "04", "WHERE I STUDIED", "Education"),
+        ("leadership", "05", "BEYOND CODE", "Leadership & Involvement"),
     ]:
         header(slug, num, kicker, title)
     timeline()
-    project_cards()
     stack()
     education()
     leadership()
